@@ -1,0 +1,1 @@
+Frontend- everything a user can see and interact with ex login page etc. Display and collect user data from user it should not be trusted for security
