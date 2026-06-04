@@ -1,1 +1,37 @@
 Frontend- everything a user can see and interact with ex login page etc. Display and collect user data from user it should not be trusted for security
+
+State Management- Process of handling and managing the data that determines what the user sees and interact with in application
+
+Backend- Main Brain of Programming. Defines Bussiness logics, hanldes authentication and autherisation provides data security and integrity
+
+Client Server Architecture- Software Design Model where Client requests something, a server Process the requests and then return a response 
+
+HTTPS- More Secure then normal Http becuase it Provides TLS handshake for security(Transport Layer Security)
+Ensures Encryotions, Identity Verification 
+
+HTTPS Flow-
+browser
+requests certificate
+server send certificate
+encryption key created
+secure communication 
+
+REST API- stands for Representationl State Transfer. designed to create a standard Architectural style for WebAPI. It is a Building Blueprint
+Resource should be identified by URls  and manipluated using Http concepts
+
+Stateless- server does not remember anything, requests provide full Information evreytime 
+
+API versoning- practice of maintaining multiple versons of API so that old clients can continue to work on while new can use updated behaviour
+API contract- agreement between client and server 
+defines - request format
+          response format
+          status code 
+          headers
+
+
+Authentication- authenticate user on basis of their ids and passwords. ask user who are you
+Authorisation- gets the user autherisation level for ex if admin or normal user. ask user what can you do 
+
+Backend trust boundary- this boundary indicates if the data is verified or unverified by the backend. we never trunt the client side data blindly becuase
+it is controled by user and can be tampered with. all the imp data must be validated by backend 
+
