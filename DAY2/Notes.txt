@@ -1,0 +1,37 @@
+Terminal- A text based Interface to interact with your Operating System. it run a shell like fish, bash etc
+
+core concepts- pattern that follows comand [options] [arguments]
+example ls -la /home
+ls- list all files
+-la also get hidden files 
+/home directory in which commands should execute
+
+Essential Commands-
+pwd- Print working Directory 
+-l - long format
+-a - all files including hidden ones 
+-h - human readable
+cd - change directory     ex cd /dir 
+mkdir- make a directory/folder in given path
+touch- create a file in the given path , to create hidden use .  ex touch .env
+man- manual page to learn for specific commands  
+rm - remove the file or directory
+
+File and Folder Operation
+cp- copy, duplicate a file from source or directory       ex  cp source.txt destination.txt  full copy with all metadata cp -a 
+mv- moves a file or directory to another folder or rename it if in same destination
+rename- use to rename all files in bulk 
+
+Viewing File content
+cat- Print entire file in the terminal         cat -n  number ll output line 
+less- paginated view of file
+head- print first 10 lines of file            head -n 20  for 20 lines 
+tail- print last 10 lines                      tail -f watches the file as it grown usefull for logs
+find- find the files based on name or type or user permisssion
+grep- searched file contents for given pattern
+
+Process and Port management 
+process - it is a runing instance of a program 
+port- virtual endpoint for network communication
+lsof- list open files   
+
