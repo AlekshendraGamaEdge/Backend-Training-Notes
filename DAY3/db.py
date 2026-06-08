@@ -18,5 +18,5 @@ async def create_users(email: str, hashed_password: str, full_name: str) -> Dict
 
 
 async def async_find_user(email: str) -> Optional[Dict[str, Any]]:
-    await asyncio.sleep(0.01)  # simulate DB read
+    await asyncio.sleep(0.01)  
     return _users_db.get(email)

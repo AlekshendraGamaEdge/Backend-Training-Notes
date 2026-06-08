@@ -25,13 +25,12 @@ class JWTAuthMiddleware(BaseHTTPMiddleware):
         if request.url.path in PUBLIC_PATHS:
             return await call_next(request)
         
-        # Extract Bearer token from Authorization header
         auth_header = request.headers.get("Authorization")
         if not auth_header or not auth_header.startswith("Bearer "):
             logger.warning(f"Missing or invalid auth header for {request.url.path}")
             return Response("Unauthorized", status_code=401)
         
-        token = auth_header.split(" ", 1)[1]  # Extract token after "Bearer "
+        token = auth_header.split(" ", 1)[1] 
         logger.info(f"Token extracted from header for {request.url.path}: {token[:20]}...")
         
         try:
@@ -64,7 +63,7 @@ security = HTTPBearer()
 
 app.add_middleware(JWTAuthMiddleware)
 
-# Add OpenAPI security scheme for Swagger padlock
+
 def custom_openapi():
     if app.openapi_schema:
         return app.openapi_schema
@@ -81,7 +80,7 @@ def custom_openapi():
             "description": "JWT Token"
         }
     }
-    # Don't set global security - let endpoints define their own
+
     app.openapi_schema = openapi_schema
     return app.openapi_schema
 
